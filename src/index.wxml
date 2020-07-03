@@ -1,0 +1,23 @@
+<view class="city-picker" style="height: {{height}}rpx">
+    <view class="mask"></view>
+    <view class="city-picker__toolbar">
+        <view class="city-picker-cancel" bind:tap="_cancel">取消</view>
+        <view class="city-picker-confirm" style="color: {{color}}" bind:tap="_confirm">确定</view>
+    </view>
+    <picker-view
+            style="height: {{height - 90}}rpx"
+            class="city-picker__columns"
+            indicator-style="height: {{height * 3 + 18}}rpx;"
+            value="{{selectCityIndex}}"
+            bind:change="_change">
+        <picker-view-column>
+            <view wx:for="{{province}}" wx:key="code">{{item.name}}</view>
+        </picker-view-column>
+        <picker-view-column>
+            <view wx:for="{{city}}" wx:key="code">{{item.name}}</view>
+        </picker-view-column>
+        <picker-view-column>
+            <view wx:for="{{area}}" wx:key="code">{{item.name}}</view>
+        </picker-view-column>
+    </picker-view>
+</view>

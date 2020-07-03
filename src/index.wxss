@@ -1,0 +1,37 @@
+.city-picker {
+    position: fixed;
+    z-index: 999999;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+}
+
+.city-picker__toolbar {
+    overflow: hidden;
+    border: 1px solid #ddd;
+    font-size: 30rpx;
+}
+
+.city-picker-cancel {
+    float: left;
+    margin: 20rpx 0 20rpx 30rpx;
+}
+
+.city-picker-confirm {
+    float: right;
+    margin: 20rpx 30rpx 20rpx 0;
+}
+
+.city-picker__columns {
+    position: absolute;
+    z-index: 999999999;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.city-picker__columns view {
+    line-height: 68rpx;
+    text-align: center;
+}
